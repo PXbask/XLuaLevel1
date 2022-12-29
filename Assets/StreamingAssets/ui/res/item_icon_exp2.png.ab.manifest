@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 3862151656
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3230c131d2b2f13389ec37fc5ab44990
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f267fd2d8bcb1179236b6179ac5313bc
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BuildResources/UI/Res/item_icon_exp2.png
+Dependencies: []

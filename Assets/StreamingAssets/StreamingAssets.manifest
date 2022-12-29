@@ -1,0 +1,38 @@
+ManifestFileVersion: 0
+CRC: 2596287558
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: ui/prefab/test.prefab.ab
+      Dependencies: {}
+    Info_1:
+      Name: ui/prefab/testui.prefab.ab
+      Dependencies:
+        Dependency_0: ui/res/item_icon_scroll.png.ab
+    Info_2:
+      Name: ui/res/gold.png.ab
+      Dependencies: {}
+    Info_3:
+      Name: ui/res/gold_s.png.ab
+      Dependencies: {}
+    Info_4:
+      Name: ui/res/icon_error.png.ab
+      Dependencies: {}
+    Info_5:
+      Name: ui/res/icon_info.png.ab
+      Dependencies: {}
+    Info_6:
+      Name: ui/res/icon_question.png.ab
+      Dependencies: {}
+    Info_7:
+      Name: ui/res/item_icon_exp2.png.ab
+      Dependencies: {}
+    Info_8:
+      Name: ui/res/item_icon_exp3.png.ab
+      Dependencies: {}
+    Info_9:
+      Name: ui/res/item_icon_posion.png.ab
+      Dependencies: {}
+    Info_10:
+      Name: ui/res/item_icon_scroll.png.ab
+      Dependencies: {}

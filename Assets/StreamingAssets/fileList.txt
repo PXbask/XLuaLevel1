@@ -1,0 +1,11 @@
+Assets/BuildResources/UI/Prefab/Test.prefab|ui\prefab\test.prefab.ab
+Assets/BuildResources/UI/Prefab/TestUI.prefab|ui\prefab\testui.prefab.ab|Assets/BuildResources/UI/Res/item_icon_scroll.png
+Assets/BuildResources/UI/Res/gold.PNG|ui\res\gold.png.ab
+Assets/BuildResources/UI/Res/gold_s.PNG|ui\res\gold_s.png.ab
+Assets/BuildResources/UI/Res/icon_error.png|ui\res\icon_error.png.ab
+Assets/BuildResources/UI/Res/icon_info.png|ui\res\icon_info.png.ab
+Assets/BuildResources/UI/Res/icon_question.png|ui\res\icon_question.png.ab
+Assets/BuildResources/UI/Res/item_icon_exp2.png|ui\res\item_icon_exp2.png.ab
+Assets/BuildResources/UI/Res/item_icon_exp3.png|ui\res\item_icon_exp3.png.ab
+Assets/BuildResources/UI/Res/item_icon_posion.png|ui\res\item_icon_posion.png.ab
+Assets/BuildResources/UI/Res/item_icon_scroll.png|ui\res\item_icon_scroll.png.ab

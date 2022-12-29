@@ -1,0 +1,4 @@
+repository "XLuaLevel1@pxbaskone@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
