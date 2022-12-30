@@ -58,19 +58,41 @@ public class ResourcesManager : MonoBehaviour
 
         callback?.Invoke(bundleRequest?.asset);
     }
+    #region Load Resources
+    private void LoadAsset(string assetName, Action<UObject> callback = null)
+    {
+        StartCoroutine(LoadBundleAsync(assetName, callback));
+    }
+    public void LoadUI(string assetName, Action<UObject> callback = null)
+    {
+        LoadAsset(PathUtil.GetUIPath(assetName), callback);
+    }
+    public void LoadMusic(string assetName, Action<UObject> callback = null)
+    {
+        LoadAsset(PathUtil.GetMusicPath(assetName), callback);
+    }
+    public void LoadSound(string assetName, Action<UObject> callback = null)
+    {
+        LoadAsset(PathUtil.GetSoundPath(assetName), callback);
+    }
+    public void LoadEffect(string assetName, Action<UObject> callback = null)
+    {
+        LoadAsset(PathUtil.GetEffectPath(assetName), callback);
+    }
+    public void LoadScene(string assetName, Action<UObject> callback = null)
+    {
+        LoadAsset(PathUtil.GetScenePath(assetName), callback);
+    }
+    #endregion
     /// <summary>
     /// 异步加载资源
     /// </summary>
     /// <param name="assetName"></param>
     /// <param name="callback"></param>
     /// <returns></returns>
-    public void LoadAsset(string assetName, Action<UObject> callback = null)
-    {
-        StartCoroutine(LoadBundleAsync(assetName, callback));
-    }
     private void Start()
     {
-        LoadAsset("Assets/BuildResources/UI/Prefab/TestUI.prefab",OnComplete);
+        LoadUI("TestUI", OnComplete);
     }
     private void Awake()
     {
