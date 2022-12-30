@@ -58,10 +58,19 @@ public class ResourcesManager : MonoBehaviour
 
         callback?.Invoke(bundleRequest?.asset);
     }
+    private void EditorLoadAsset(string assetName, Action<UObject> callback = null)
+    {
+        UObject obj = UnityEditor.AssetDatabase.LoadAssetAtPath<UObject>(assetName);
+        if (obj == null) Debug.LogErrorFormat("asset:{0} do not found", assetName); 
+        callback?.Invoke(obj);
+    }
     #region Load Resources
     private void LoadAsset(string assetName, Action<UObject> callback = null)
     {
-        StartCoroutine(LoadBundleAsync(assetName, callback));
+        if(APPConst.GameMode==GameMode.EditorMode)
+            EditorLoadAsset(assetName, callback);
+        else
+            StartCoroutine(LoadBundleAsync(assetName, callback));
     }
     public void LoadUI(string assetName, Action<UObject> callback = null)
     {
@@ -83,7 +92,7 @@ public class ResourcesManager : MonoBehaviour
     {
         LoadAsset(PathUtil.GetScenePath(assetName), callback);
     }
-    #endregion
+#endregion
     /// <summary>
     /// 异步加载资源
     /// </summary>
