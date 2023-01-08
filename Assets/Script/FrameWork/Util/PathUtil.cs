@@ -17,9 +17,31 @@ public class PathUtil
     /// </summary>
     public static readonly string BundleOutPath = Application.streamingAssetsPath;
     /// <summary>
+    /// 只读目录
+    /// </summary>
+    public static readonly string ReadablePath = Application.streamingAssetsPath;
+    /// <summary>
+    /// 可读写目录
+    /// </summary>
+    public static readonly string ReadWritablePath = Application.persistentDataPath;
+    /// <summary>
+    /// Lua路径
+    /// </summary>
+    public static readonly string LuaPath = "Assets/BuildResources/LuaScripts";
+    /// <summary>
     /// AssetBundle下载路径
     /// </summary>
-    public static string BundleResourcesOutPath{ get => Application.streamingAssetsPath; }
+    public static string BundleResourcesOutPath
+    {
+        get
+        {
+            if(APPConst.GameMode == GameMode.UpdateMode)
+            {
+                return ReadWritablePath;
+            }
+            return ReadablePath;
+        }
+    }
     /// <summary>
     /// 获取Unity相对路径
     /// </summary>
@@ -45,7 +67,7 @@ public class PathUtil
     }
     public static string GetLuaPath(string name)
     {
-        return string.Format("Assets/BuildResources/LuaScript/{0}.bytes", name);
+        return string.Format("Assets/BuildResources/LuaScripts/{0}.bytes", name);
     }
     public static string GetUIPath(string name)
     {
@@ -58,6 +80,10 @@ public class PathUtil
     public static string GetSoundPath(string name)
     {
         return string.Format("Assets/BuildResources/Audio/Sound/{0}", name);
+    }
+    public static string GetModelPath(string name)
+    {
+        return string.Format("Assets/BuildResources/Model/Prefabs/{0}.prefab", name);
     }
     public static string GetEffectPath(string name)
     {

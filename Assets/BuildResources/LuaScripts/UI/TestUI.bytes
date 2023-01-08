@@ -1,0 +1,71 @@
+function OnInit()
+	print("Lua OnInit")
+end
+function OnOpen()
+	print("Lua OnOpen")
+	local playMusic = self.transform:Find("Play"):GetComponent("Button");
+	local pauseMusic = self.transform:Find("Pause"):GetComponent("Button");
+	local unpauseMusic = self.transform:Find("UnPause"):GetComponent("Button");
+	local stopMusic = self.transform:Find("Stop"):GetComponent("Button");
+	local playSound = self.transform:Find("SoundPlay"):GetComponent("Button");
+
+	local musicSlider = self.transform:Find("MusicSlider"):GetComponent("Slider");
+	local soundSlider = self.transform:Find("SoundSlider"):GetComponent("Slider");
+
+	local poolTest = self.transform:Find("PoolTest"):GetComponent("Button");
+	local close = self.transform:Find("Close"):GetComponent("Button");
+
+	playMusic:OnClickSet(
+		function()
+			Manager.Sound:PlayMusic("dayu.mp3");
+		end
+	)
+	pauseMusic:OnClickSet(
+		function()
+			Manager.Sound:PauseMusic();
+		end
+	)
+	unpauseMusic:OnClickSet(
+		function()
+			Manager.Sound:UnPauseMusic();
+		end
+	)
+	stopMusic:OnClickSet(
+		function()
+			Manager.Sound:StopMusic();
+		end
+	)
+	playSound:OnClickSet(
+		function()
+			Manager.Sound:PlaySound("ui_touch.wav");
+		end
+	)
+	musicSlider:OnValueChangedSet(
+		function(volume)
+			Manager.Sound:SetMusicVolume(volume);
+		end
+	)
+	soundSlider:OnValueChangedSet(
+		function(volume)
+			Manager.Sound:SetSoundVolume(volume);
+		end
+	)
+	poolTest:OnClickSet(
+		function()
+			msg_mgr.get_msg("msg_test"):req_first_test(99999,"PXbask","******",{1,3,5})
+		end
+	)
+	close:OnClickSet(
+		function()
+			self:OnClose();
+		end
+	)
+	musicSlider.value = 1;
+	soundSlider.value = 1;
+end
+function OnClose()
+	print("Lua OnClose")
+end
+function Update()
+	print("Lua OnUpdate")
+end

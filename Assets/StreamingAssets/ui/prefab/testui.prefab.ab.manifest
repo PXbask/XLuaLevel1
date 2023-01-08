@@ -1,19 +1,33 @@
 ManifestFileVersion: 0
-CRC: 3286384556
+CRC: 1842152186
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: b8188249448443029cbf702424e28cf5
+    Hash: 5e7cc8d7b528dd7c5baba3663ae7245b
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 7e709fe5f7b675169b925dd84be8594a
+    Hash: faeb243889f10c9cab961108b85c63c8
 HashAppended: 0
 ClassTypes:
 - Class: 1
   Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
 - Class: 115
+  Script: {instanceID: 0}
+- Class: 128
   Script: {instanceID: 0}
 - Class: 213
   Script: {instanceID: 0}
@@ -25,8 +39,24 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.CoreModule
   ClassName: UnityEngine.Events.PersistentCallGroup
 - AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.AnimationTriggers
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Button/ButtonClickedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.ColorBlock
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.FontData
+- AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Navigation
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.Slider/SliderEvent
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.SpriteState
 Assets:
 - Assets/BuildResources/UI/Prefab/TestUI.prefab
 Dependencies:
-- D:/_UnityProject/XLuaLevel1/Assets/StreamingAssets/ui/res/item_icon_scroll.png.ab
+- D:/_UnityProject/XLuaLevel1/Assets/StreamingAssets/ui/res/background.png.ab
+- D:/_UnityProject/XLuaLevel1/Assets/StreamingAssets/ui/res/button_150.png.ab
+- D:/_UnityProject/XLuaLevel1/Assets/StreamingAssets/ui/res/slider_handle.png.ab

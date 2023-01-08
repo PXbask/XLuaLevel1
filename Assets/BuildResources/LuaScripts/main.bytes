@@ -1,0 +1,31 @@
+Manager = CS.Manager;
+PathUtil = CS.PathUtil;
+Vector3 = CS.UnityEngine.Vector3;
+Input = CS.UnityEngine.Input;
+KeyCode = CS.UnityEngine.KeyCode;
+Time = CS.UnityEngine.Time;
+APPConst = CS.APPConst
+Json = require('rapidjson')
+Log = require("Log")
+require("class")
+base_msg = require('Message.base_msg')
+msg_mgr = require('Message.msg_mgr')
+
+local ui_group = {
+	"Main","UI","Box"
+}
+local entity_group = {
+	"Player","Monster","Effect"
+}
+Manager.UI:SetUIGroup(ui_group);
+Manager.Entity:SetEntityGroup(entity_group);
+function Main()
+	msg_mgr.init();
+	Manager.Net:Init();
+	Manager.Net:ConnectedServer("127.0.0.1",8000);
+	--print('Hello World!');
+	Manager.UI:OpenUI("TestUI","UI","UI.TestUI");
+
+end
+
+Main();

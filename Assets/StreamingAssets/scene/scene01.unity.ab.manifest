@@ -1,0 +1,46 @@
+ManifestFileVersion: 0
+CRC: 3065514869
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 61c0b4378ef1e23b1adc84ca8c2b0641
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f9c0e72b445acd2a40dd5810c90c7beb
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 20
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 81
+  Script: {instanceID: 0}
+- Class: 104
+  Script: {instanceID: 0}
+- Class: 108
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+- Class: 157
+  Script: {instanceID: 0}
+- Class: 196
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/BuildResources/Scene/scene01.unity
+Dependencies:
+- D:/_UnityProject/XLuaLevel1/Assets/StreamingAssets/model/material/test01.mat.ab
