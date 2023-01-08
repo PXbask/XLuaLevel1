@@ -4,7 +4,7 @@ function base_msg:add_req_res(msg_name,msg_id,...)
     local keys = {...}
     self["req_"..msg_name] = function(self,...)
         local values = {...}
-        if not #keys ~= #values then
+        if #keys ~= #values then
             Log.Error("参数不正确:",msg_name)
         end
         local send_data = {};

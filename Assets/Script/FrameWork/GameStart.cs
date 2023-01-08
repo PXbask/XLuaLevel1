@@ -6,19 +6,29 @@ public class GameStart : MonoBehaviour
 {
     [Tooltip("选择开发模式")]
     public GameMode GameMode;
+    [Tooltip("允许打开日志")]
     public bool OpenLog;
     private void Start()
     {
-        Manager.Event.Subscribe(10000, OnLuaInit);
+        Manager.Event.Subscribe((int)GameEvent.StartLua, StartLua);
+        Manager.Event.Subscribe((int)GameEvent.GameInit, GameInit);
 
         APPConst.GameMode = GameMode;
         APPConst.OpenLog = OpenLog;
         DontDestroyOnLoad(this);
 
-        Manager.Resources.ParseVersionFile();
+        if (APPConst.GameMode == GameMode.UpdateMode)
+            this.gameObject.AddComponent<HotUpdate>();
+        else
+            Manager.Event.Fire((int)GameEvent.GameInit);
+    }
+    private void GameInit(object arg)
+    {
+        if(APPConst.GameMode != GameMode.EditorMode)
+            Manager.Resources.ParseVersionFile();
         Manager.Lua.Init();
     }
-    private void OnLuaInit(object args)
+    private void StartLua(object args)
     {
         Manager.Lua.StartLua("main");
 
@@ -28,8 +38,9 @@ public class GameStart : MonoBehaviour
 
         Manager.Pool.CreateAssetPool("AssetBundle", 10);
     }
-    private void OnApplicationQuit()
+    public void OnApplicationQuit()
     {
-        Manager.Event.UnSubscribe(10000, OnLuaInit);
+        Manager.Event.UnSubscribe((int)GameEvent.StartLua, StartLua);
+        Manager.Event.UnSubscribe((int)GameEvent.GameInit, GameInit);
     }
 }

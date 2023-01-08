@@ -4,7 +4,7 @@ Vector3 = CS.UnityEngine.Vector3;
 Input = CS.UnityEngine.Input;
 KeyCode = CS.UnityEngine.KeyCode;
 Time = CS.UnityEngine.Time;
-APPConst = CS.APPConst
+APPConst = CS.APPConst;
 Json = require('rapidjson')
 Log = require("Log")
 require("class")

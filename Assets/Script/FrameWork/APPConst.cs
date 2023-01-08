@@ -9,6 +9,11 @@ public enum GameMode
     PackageBundle,
     UpdateMode,
 }
+public enum GameEvent
+{
+    GameInit = 10000,
+    StartLua, 
+}
 public class APPConst
 {
     public const string ASSET_BUNDLE_EXTENSION = ".ab";
